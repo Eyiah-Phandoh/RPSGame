@@ -2,14 +2,15 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class NumberGuessingGame {
-    public static void playGame(Scanner scanner){
+    public static void playGame(Scanner scanner) {
         Random random = new Random();
 
         int guessLimit = 3;
         int guessCount = 0;
-        int magicNumber = random.nextInt(10);
+        // int magicNumber = random.nextInt(10);
+        int magicNumber = 9;
 
-        while(guessCount < guessLimit){
+        while (guessCount < guessLimit) {
             System.out.println("\nGuess the magic number(0-10): ");
             int userInput;
             try {
@@ -21,7 +22,7 @@ public class NumberGuessingGame {
             }
             guessCount++;
 
-            if (userInput == magicNumber){
+            if (userInput == magicNumber) {
                 System.out.println("Hurray! You guessed right.\n");
                 break;
             } else if (userInput != magicNumber && guessCount < guessLimit) {
